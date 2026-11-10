@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://6jm4vjx0ueh2"]
+
+[ext_resource type="Script" uid="uid://cjdtfocfq23fo" path="res://scripts/settings.gd" id="1_5p8wc"]
+[ext_resource type="Texture2D" uid="uid://d1f68o7ghgdow" path="res://assets/sprites/world/main_menu_bg.png" id="2_r6d6q"]
+
+[node name="Settings" type="Node2D" unique_id=2132844999]
+script = ExtResource("1_5p8wc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1144428190]
+
+[node name="SettingsPanel" type="Panel" parent="CanvasLayer" unique_id=813911612]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SettingsPanel" unique_id=1891563585]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 400.0
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="CanvasLayer/SettingsPanel/VBoxContainer" unique_id=172050246]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/SettingsPanel/VBoxContainer" unique_id=1583606893]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="MusicSlider" type="HSlider" parent="CanvasLayer/SettingsPanel/VBoxContainer" unique_id=315475670]
+layout_mode = 2
+value = 80.0
+
+[node name="Label3" type="Label" parent="CanvasLayer/SettingsPanel/VBoxContainer" unique_id=1312524753]
+layout_mode = 2
+text = "Sound Volume"
+
+[node name="SoundSlider" type="HSlider" parent="CanvasLayer/SettingsPanel/VBoxContainer" unique_id=1934320894]
+layout_mode = 2
+value = 80.0
+
+[node name="FullscreenToggle" type="CheckButton" parent="CanvasLayer/SettingsPanel/VBoxContainer" unique_id=1937140195]
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="ApplyButton" type="Button" parent="CanvasLayer/SettingsPanel/VBoxContainer" unique_id=1870969474]
+layout_mode = 2
+text = "Save"
+
+[node name="BackButton" type="Button" parent="CanvasLayer/SettingsPanel/VBoxContainer" unique_id=497531571]
+layout_mode = 2
+text = "Back"
+
+[node name="Background" type="TextureRect" parent="." unique_id=1730127207]
+offset_left = -46.0
+offset_top = -10.0
+offset_right = 1574.0
+offset_bottom = 961.0
+texture = ExtResource("2_r6d6q")
+
+[connection signal="pressed" from="CanvasLayer/SettingsPanel/VBoxContainer/ApplyButton" to="." method="_on_apply_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/SettingsPanel/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

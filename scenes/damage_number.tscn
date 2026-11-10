@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bai8wu86548ur"]
+
+[ext_resource type="Script" uid="uid://crps3xcrgygxx" path="res://scripts/damage_number.gd" id="1_aie4f"]
+
+[node name="DamageNumber" type="Label" unique_id=1657374435]
+modulate = Color(1, 0, 0, 1)
+offset_right = 40.0
+offset_bottom = 23.0
+mouse_filter = 1
+script = ExtResource("1_aie4f")

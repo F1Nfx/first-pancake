@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://d2xytcfronvsx"]
+
+[ext_resource type="Script" uid="uid://fd3ijm4uqkj2" path="res://scripts/main_menu.gd" id="1_yqorp"]
+[ext_resource type="Texture2D" uid="uid://d1f68o7ghgdow" path="res://assets/sprites/world/main_menu_bg.png" id="2_ow34m"]
+[ext_resource type="Theme" uid="uid://dyh0tujtwgli2" path="res://themes/theme_button.tres" id="3_2wh52"]
+[ext_resource type="Texture2D" uid="uid://dp7st0vqfmklc" path="res://assets/sprites/ui/wood.png" id="4_l72w3"]
+[ext_resource type="AudioStream" uid="uid://br8yfwvcw575y" path="res://assets/music/main_menutheme.ogg" id="5_l72w3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tefeu"]
+texture = ExtResource("4_l72w3")
+region_rect = Rect2(71.33569, 685.3364, 1116.6643, 104.663574)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l72w3"]
+texture = ExtResource("4_l72w3")
+region_rect = Rect2(71.336, 685.336, 1116.664, 104.664)
+modulate_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l72w3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ow34m"]
+texture = ExtResource("4_l72w3")
+region_rect = Rect2(71.336, 685.336, 1116.664, 104.664)
+modulate_color = Color(0.8156863, 0.8156863, 0.8156863, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_826wr"]
+texture = ExtResource("4_l72w3")
+region_rect = Rect2(0, 1064, 1162, 79)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8a8k8"]
+texture = ExtResource("4_l72w3")
+region_rect = Rect2(0, 1064, 1162, 79)
+modulate_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ucygd"]
+texture = ExtResource("4_l72w3")
+region_rect = Rect2(0, 1064, 1162, 79)
+modulate_color = Color(0.8156863, 0.8156863, 0.8156863, 1)
+
+[node name="MainMenu" type="Node2D" unique_id=1388008123]
+script = ExtResource("1_yqorp")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=490715321]
+texture_repeat = 2
+position = Vector2(941, 537)
+texture = ExtResource("2_ow34m")
+region_enabled = true
+region_rect = Rect2(1920, 1080, 1920, 1080)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=843894724]
+
+[node name="MenuPanel" type="Panel" parent="CanvasLayer" unique_id=1258356069]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MenuPanel" unique_id=1940010742]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -405.0
+offset_right = 200.0
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/MenuPanel/VBoxContainer" unique_id=761416366]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Первый блин"
+horizontal_alignment = 1
+
+[node name="PlayButton" type="Button" parent="CanvasLayer/MenuPanel/VBoxContainer" unique_id=1943803602]
+texture_repeat = 2
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme = ExtResource("3_2wh52")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxTexture_tefeu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_l72w3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_l72w3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ow34m")
+text = "Play"
+
+[node name="SettingsButton" type="Button" parent="CanvasLayer/MenuPanel/VBoxContainer" unique_id=1036350857]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxTexture_826wr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8a8k8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ucygd")
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/MenuPanel/VBoxContainer" unique_id=1891991335]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 37
+theme_override_styles/normal = SubResource("StyleBoxTexture_826wr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8a8k8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ucygd")
+text = "Quit"
+
+[node name="VersionLabel" type="Label" parent="." unique_id=1635565694]
+offset_left = 1.0
+offset_top = 875.0
+offset_right = 192.0
+offset_bottom = 923.0
+theme_override_font_sizes/font_size = 22
+text = "v 0.6"
+
+[node name="AuthorLabel" type="Label" parent="." unique_id=859497541]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1009.0
+offset_top = 874.0
+offset_right = 1559.0
+offset_bottom = 922.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 18
+text = "Made by F1Nfx and DeN41K_FN"
+
+[node name="MenuMusic" type="AudioStreamPlayer2D" parent="." unique_id=861956076]
+stream = ExtResource("5_l72w3")
+volume_db = -10.0
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="CanvasLayer/MenuPanel/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MenuPanel/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MenuPanel/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

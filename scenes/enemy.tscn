@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://do4beinesuwts"]
+
+[ext_resource type="Script" uid="uid://cc6qyie8pyoal" path="res://scripts/enemy.gd" id="1_md0e3"]
+[ext_resource type="Texture2D" uid="uid://cg4c3ev5fd1xv" path="res://assets/sprites/enemies/slime/slime_walk1.png" id="2_5uy6h"]
+[ext_resource type="Texture2D" uid="uid://cw0052h2gdjy1" path="res://assets/sprites/enemies/beholder/beholder_walk1.png" id="2_wtq4b"]
+[ext_resource type="Texture2D" uid="uid://cd7c4rd8x4clk" path="res://assets/sprites/enemies/slime/slime_walk2.png" id="3_c4w8v"]
+[ext_resource type="Texture2D" uid="uid://b82r8gkopvb4b" path="res://assets/sprites/enemies/beholder/beholder_walk2.png" id="3_j0cyh"]
+[ext_resource type="Texture2D" uid="uid://dedpuyqxo16i7" path="res://assets/sprites/enemies/beholder/beholder_walk3.png" id="4_g0wcc"]
+[ext_resource type="Texture2D" uid="uid://dl016l6ye5nnn" path="res://assets/sprites/enemies/slime/slime_walk3.png" id="4_xwavj"]
+[ext_resource type="Texture2D" uid="uid://cnad2ut3gpvqe" path="res://assets/sprites/enemies/devourer/devourer_walk1.png" id="5_ile5s"]
+[ext_resource type="Texture2D" uid="uid://xsh4mjk1wlip" path="res://assets/sprites/enemies/eye/eye_walking1.png" id="5_j0cyh"]
+[ext_resource type="Texture2D" uid="uid://dai6fdsa4bbld" path="res://assets/sprites/enemies/ghost/ghost_walk1.png" id="5_wtq4b"]
+[ext_resource type="Texture2D" uid="uid://bw5pyqrogqoc6" path="res://assets/sprites/enemies/devourer/devourer_walk2.png" id="6_1x4g4"]
+[ext_resource type="Texture2D" uid="uid://b073s73kxjwcc" path="res://assets/sprites/enemies/eye/eye_walking2.png" id="6_g0wcc"]
+[ext_resource type="Texture2D" uid="uid://ckoep0s8sxnor" path="res://assets/sprites/enemies/ghost/ghost_walk2.png" id="6_j0cyh"]
+[ext_resource type="Texture2D" uid="uid://b2e3r4sodepte" path="res://assets/sprites/enemies/devourer/devourer_walk3.png" id="7_2pwtc"]
+[ext_resource type="Texture2D" uid="uid://cmhq5tju0fjv0" path="res://assets/sprites/enemies/ghost/ghost_walk3.png" id="7_g0wcc"]
+[ext_resource type="Texture2D" uid="uid://c8pwfejlsiq24" path="res://assets/sprites/enemies/eye/eye_walking3.png" id="7_s1ycm"]
+[ext_resource type="Texture2D" uid="uid://cslq0bwvapyor" path="res://assets/sprites/enemies/ghost/ghost_walk4.png" id="11_g0wcc"]
+[ext_resource type="Texture2D" uid="uid://b8vcn2qoi55fe" path="res://assets/sprites/enemies/ghost/ghost_walk5.png" id="12_s1ycm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dx6j3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wtq4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_j0cyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g0wcc")
+}],
+"loop": 1,
+"name": &"beholder_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.3,
+"texture": ExtResource("5_ile5s")
+}, {
+"duration": 1.3,
+"texture": ExtResource("6_1x4g4")
+}, {
+"duration": 1.3,
+"texture": ExtResource("7_2pwtc")
+}],
+"loop": 1,
+"name": &"devourer_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.3,
+"texture": ExtResource("5_j0cyh")
+}, {
+"duration": 1.3,
+"texture": ExtResource("6_g0wcc")
+}, {
+"duration": 1.3,
+"texture": ExtResource("7_s1ycm")
+}],
+"loop": 1,
+"name": &"eye_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wtq4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_j0cyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_g0wcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_g0wcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s1ycm")
+}],
+"loop": 1,
+"name": &"ghost_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_5uy6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c4w8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xwavj")
+}],
+"loop": 1,
+"name": &"slime_walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6o62y"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k4bcs"]
+radius = 16.0
+
+[node name="Enemy" type="Node2D" unique_id=2093093705 groups=["enemies", "enemy_hitbox", "enemy_hurtbox"]]
+script = ExtResource("1_md0e3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2742147]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_dx6j3")
+animation = &"devourer_walk"
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=39930111 groups=["enemy_hurtbox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=29696921]
+shape = SubResource("CircleShape2D_6o62y")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1462873155 groups=["enemy_hitbox"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1404623802]
+shape = SubResource("CircleShape2D_k4bcs")

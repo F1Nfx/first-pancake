@@ -1,0 +1,475 @@
+[gd_scene format=3 uid="uid://durrse6ldwv3d"]
+
+[ext_resource type="Script" uid="uid://baqheuo6eimrc" path="res://scripts/main.gd" id="1_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://cqx2s5s0tkbtw" path="res://assets/sprites/world/floor.png" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://dsxp68xatccbg" path="res://scenes/player.tscn" id="2_sugp2"]
+[ext_resource type="Texture2D" uid="uid://cdjifmcc6hh5v" path="res://assets/sprites/world/wall.png" id="3_jyhfs"]
+[ext_resource type="FontFile" uid="uid://nkbnhrws78xs" path="res://assets/fonts/PressStart2P-Regular.ttf" id="5_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://b0opqugkw8nc" path="res://assets/sprites/ui/book.png" id="5_tipki"]
+[ext_resource type="Texture2D" uid="uid://ihdw1b0c0me1" path="res://assets/sprites/ui/perhament.png" id="7_tipki"]
+[ext_resource type="Texture2D" uid="uid://be4xr0osfhhs3" path="res://assets/sprites/ui/Button.png" id="8_85g3d"]
+[ext_resource type="Texture2D" uid="uid://5i3ov2rgl64e" path="res://assets/sprites/ui/border.png" id="9_85g3d"]
+[ext_resource type="AudioStream" uid="uid://ba5c0hmhev221" path="res://assets/music/maintheme.ogg" id="10_choun"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jscy8"]
+texture = ExtResource("5_tipki")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pm3ni"]
+texture = ExtResource("8_85g3d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y6deb"]
+texture = ExtResource("8_85g3d")
+modulate_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_og1vs"]
+texture = ExtResource("8_85g3d")
+texture_margin_left = 3.0
+texture_margin_top = 2.0
+texture_margin_right = 5.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yc10j"]
+texture = ExtResource("7_tipki")
+region_rect = Rect2(22, -21, 1073, 1254)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tefeu"]
+texture = ExtResource("8_85g3d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o6xl0"]
+texture = ExtResource("8_85g3d")
+modulate_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tipki"]
+texture = ExtResource("8_85g3d")
+texture_margin_left = 5.0
+texture_margin_top = 2.0
+texture_margin_right = 3.0
+texture_margin_bottom = 4.0
+modulate_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_85g3d"]
+texture = ExtResource("8_85g3d")
+region_rect = Rect2(1, 7, 61, 57)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_choun"]
+texture = ExtResource("8_85g3d")
+region_rect = Rect2(1, 7, 61, 57)
+modulate_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ya4ey"]
+texture = ExtResource("8_85g3d")
+texture_margin_left = 3.0
+texture_margin_top = 4.0
+texture_margin_right = 2.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(1, 7, 61, 57)
+modulate_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dp3eg"]
+texture = ExtResource("7_tipki")
+region_rect = Rect2(193, 207, 756, 407)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gqmmt"]
+texture = ExtResource("8_85g3d")
+texture_margin_left = 16.0
+texture_margin_top = 20.0
+texture_margin_right = 12.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_trceg"]
+texture = ExtResource("8_85g3d")
+texture_margin_left = 16.0
+texture_margin_top = 20.0
+texture_margin_right = 12.0
+texture_margin_bottom = 16.0
+modulate_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a8y0u"]
+texture = ExtResource("8_85g3d")
+texture_margin_left = 10.0
+texture_margin_top = 12.0
+texture_margin_right = 7.0
+texture_margin_bottom = 9.0
+modulate_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jkv2x"]
+texture = ExtResource("8_85g3d")
+texture_margin_left = 10.0
+texture_margin_top = 5.0
+texture_margin_right = 12.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(0, 6, 64, 54)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jbj1t"]
+texture = ExtResource("8_85g3d")
+texture_margin_left = 5.0
+texture_margin_top = 3.0
+texture_margin_right = 5.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(0, 6, 64, 54)
+modulate_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_muem4"]
+texture = ExtResource("8_85g3d")
+texture_margin_left = 10.0
+texture_margin_top = 5.0
+texture_margin_right = 12.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(0, 6, 64, 54)
+modulate_color = Color(0.28485012, 0.28485036, 0.28485, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ld40"]
+texture = ExtResource("7_tipki")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyhfs"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.30513147, 0.70770305, 0.41008857, 1)
+
+[node name="Main" type="Node2D" unique_id=282899718]
+script = ExtResource("1_0wfyh")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1428327643]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(1008, 999)
+texture = ExtResource("2_jyhfs")
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 2100)
+
+[node name="Walltop" type="Sprite2D" parent="." unique_id=137037946]
+modulate = Color(0.5019608, 0.5019608, 0.627451, 1)
+texture_repeat = 2
+position = Vector2(1000, -40)
+texture = ExtResource("3_jyhfs")
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 64)
+
+[node name="WallBottom" type="Sprite2D" parent="." unique_id=2057519442]
+modulate = Color(0.5019608, 0.5019608, 0.627451, 1)
+texture_repeat = 2
+position = Vector2(1025, 2083)
+scale = Vector2(1.0361905, 1)
+texture = ExtResource("3_jyhfs")
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 64)
+
+[node name="WallLeft" type="Sprite2D" parent="." unique_id=157410012]
+modulate = Color(0.5019608, 0.5019608, 0.627451, 1)
+texture_repeat = 2
+position = Vector2(-73, 1021.5)
+scale = Vector2(1, 1.0414287)
+texture = ExtResource("3_jyhfs")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 2100)
+
+[node name="WallRight" type="Sprite2D" parent="." unique_id=1956643399]
+modulate = Color(0.5019608, 0.5019608, 0.627451, 1)
+texture_repeat = 2
+position = Vector2(2081, 999.99994)
+scale = Vector2(1, 1.0209523)
+texture = ExtResource("3_jyhfs")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 2100)
+
+[node name="Player" parent="." unique_id=752415644 instance=ExtResource("2_sugp2")]
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=247570313]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1195995898]
+
+[node name="LevelUpPanel" type="Panel" parent="CanvasLayer" unique_id=1016853153]
+visible = false
+custom_minimum_size = Vector2(640, 420)
+custom_maximum_size = Vector2(640, 420)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -105.0
+offset_right = 233.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jscy8")
+
+[node name="LeftPage" type="VBoxContainer" parent="CanvasLayer/LevelUpPanel" unique_id=2017441045]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 32.0
+offset_right = 301.0
+offset_bottom = 372.0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="IconButton1" type="TextureButton" parent="CanvasLayer/LevelUpPanel/LeftPage" unique_id=672517403]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+stretch_mode = 5
+
+[node name="IconButton2" type="TextureButton" parent="CanvasLayer/LevelUpPanel/LeftPage" unique_id=214284051]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+stretch_mode = 5
+
+[node name="IconButton3" type="TextureButton" parent="CanvasLayer/LevelUpPanel/LeftPage" unique_id=674579662]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+stretch_mode = 5
+
+[node name="AcceptButton" type="Button" parent="CanvasLayer/LevelUpPanel/LeftPage" unique_id=1563670406]
+custom_minimum_size = Vector2(140, 48)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_pm3ni")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_y6deb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_og1vs")
+text = "Accept"
+
+[node name="RightPage" type="VBoxContainer" parent="CanvasLayer/LevelUpPanel" unique_id=1518723316]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 31.0
+offset_right = 594.0
+offset_bottom = 371.0
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="SelectedIcon" type="TextureRect" parent="CanvasLayer/LevelUpPanel/RightPage" unique_id=866978868]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+stretch_mode = 5
+
+[node name="BuffName" type="Label" parent="CanvasLayer/LevelUpPanel/RightPage" unique_id=1994827710]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="BuffDesc" type="Label" parent="CanvasLayer/LevelUpPanel/RightPage" unique_id=648758654]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+
+[node name="GameOverPanel" type="Panel" parent="CanvasLayer" unique_id=765601781]
+visible = false
+offset_left = 601.0
+offset_top = 345.0
+offset_right = 902.0
+offset_bottom = 662.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yc10j")
+
+[node name="Label" type="Label" parent="CanvasLayer/GameOverPanel" unique_id=825775231]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 301.0
+offset_bottom = 46.0
+theme_override_fonts/font = ExtResource("5_tbgi4")
+theme_override_font_sizes/font_size = 32
+text = "Game over"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="Button" parent="CanvasLayer/GameOverPanel" unique_id=492542309]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 0
+offset_left = 51.0
+offset_top = 177.0
+offset_right = 251.0
+offset_bottom = 227.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_tefeu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_o6xl0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_tipki")
+text = "Restart"
+icon_alignment = 1
+
+[node name="MenuButton" type="Button" parent="CanvasLayer/GameOverPanel" unique_id=511587427]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 0
+offset_left = 45.0
+offset_top = 242.0
+offset_right = 257.0
+offset_bottom = 292.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_85g3d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_choun")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ya4ey")
+text = "To main menu"
+
+[node name="StatsLabel" type="Label" parent="CanvasLayer/GameOverPanel" unique_id=18932831]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 62.0
+offset_right = 250.0
+offset_bottom = 123.0
+theme_override_font_sizes/font_size = 14
+
+[node name="PausePanel" type="Panel" parent="CanvasLayer" unique_id=1545202059]
+visible = false
+custom_minimum_size = Vector2(250, 180)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dp3eg")
+
+[node name="Label" type="Label" parent="CanvasLayer/PausePanel" unique_id=694582312]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 4.0
+offset_right = 210.0
+offset_bottom = 49.0
+mouse_filter = 0
+theme_override_font_sizes/font_size = 27
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="CanvasLayer/PausePanel" unique_id=1208263566]
+custom_minimum_size = Vector2(200, 50)
+custom_maximum_size = Vector2(200, 50)
+layout_mode = 0
+offset_left = 31.0
+offset_top = 53.0
+offset_right = 231.0
+offset_bottom = 103.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_gqmmt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_trceg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_a8y0u")
+text = "Resume"
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/PausePanel" unique_id=846694275]
+custom_minimum_size = Vector2(200, 50)
+custom_maximum_size = Vector2(200, 50)
+layout_mode = 0
+offset_left = 31.0
+offset_top = 112.0
+offset_right = 231.0
+offset_bottom = 162.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_jkv2x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jbj1t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_muem4")
+text = "Quit"
+
+[node name="StatsPanel" type="Panel" parent="CanvasLayer" unique_id=2019968431]
+visible = false
+custom_minimum_size = Vector2(300, 250)
+custom_maximum_size = Vector2(300, 250)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0ld40")
+
+[node name="StatsTextLabel" type="Label" parent="CanvasLayer/StatsPanel" unique_id=1952870120]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 46.0
+offset_transform_position = Vector2(20, 20)
+theme_override_font_sizes/font_size = 18
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=885169907]
+
+[node name="HeartsFrame" type="TextureRect" parent="HUD" unique_id=1047074876]
+custom_maximum_size = Vector2(350, 100)
+offset_left = -13.0
+offset_top = -10.0
+offset_right = 387.0
+offset_bottom = 90.0
+texture = ExtResource("9_85g3d")
+
+[node name="HeartsContainer" type="HBoxContainer" parent="HUD" unique_id=658097099]
+offset_left = 37.0
+offset_top = 16.0
+offset_right = 137.0
+offset_bottom = 56.0
+theme_override_constants/separation = 12
+
+[node name="HeartsRow" type="HBoxContainer" parent="HUD/HeartsContainer" unique_id=55439109]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TextureRect" type="TextureRect" parent="HUD/HeartsContainer/HeartsRow" unique_id=403309881]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="HUD/HeartsContainer/HeartsRow" unique_id=619022865]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="HUD/HeartsContainer/HeartsRow" unique_id=1545386715]
+layout_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="HUD/HeartsContainer/HeartsRow" unique_id=421185892]
+layout_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="HUD/HeartsContainer/HeartsRow" unique_id=927416622]
+layout_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="HUD/HeartsContainer/HeartsRow" unique_id=1581337967]
+layout_mode = 2
+
+[node name="XPBar" type="ProgressBar" parent="HUD" unique_id=268663261]
+custom_minimum_size = Vector2(200, 15)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+offset_transform_position = Vector2(0, 60)
+theme_override_styles/background = SubResource("StyleBoxFlat_jyhfs")
+show_percentage = false
+
+[node name="WaveLabel" type="Label" parent="HUD" unique_id=348143152]
+z_index = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -159.0
+offset_top = 16.0
+offset_right = -39.0
+offset_bottom = 39.0
+grow_horizontal = 0
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("5_tbgi4")
+theme_override_font_sizes/font_size = 20
+text = "Wave 1"
+
+[node name="WaveFrame" type="TextureRect" parent="HUD" unique_id=948143343]
+custom_maximum_size = Vector2(200, 80)
+offset_left = 1292.0
+offset_top = -11.0
+offset_right = 1492.0
+offset_bottom = 69.0
+texture = ExtResource("9_85g3d")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1331400996]
+stream = ExtResource("10_choun")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="CanvasLayer/LevelUpPanel/LeftPage/IconButton1" to="." method="_on_icon_button_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/LevelUpPanel/LeftPage/IconButton2" to="." method="_on_icon_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/LevelUpPanel/LeftPage/IconButton3" to="." method="_on_icon_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/LevelUpPanel/LeftPage/AcceptButton" to="." method="_on_accept_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameOverPanel/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameOverPanel/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PausePanel/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PausePanel/QuitButton" to="." method="_on_quit_button_pressed"]

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dtb3ibigsis32"]
+
+[ext_resource type="Script" uid="uid://c6ph13stjux8u" path="res://scripts/bullet.gd" id="1_y25gk"]
+[ext_resource type="Texture2D" uid="uid://bwiqgom5iueiu" path="res://assets/sprites/bullets/bullet.png" id="2_y25gk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k4bcs"]
+radius = 6.0
+
+[node name="Bullet" type="Node2D" unique_id=990823195]
+script = ExtResource("1_y25gk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1977308939]
+scale = Vector2(2, 2)
+texture = ExtResource("2_y25gk")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=787227318]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=679781239]
+shape = SubResource("CircleShape2D_k4bcs")
+script = ExtResource("1_y25gk")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
